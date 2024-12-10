@@ -1,0 +1,272 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+:root {
+  --text-color: #ffffff;
+  --main-bg: #000000;
+  --sec-color: #5cd2b9;
+  --pri-color: #151515;
+  --p-color: #aaaaaa;
+
+  --h1-font: 4rem;
+  --h2-font: 2.25rem;
+  --h3-font: 1.875rem;
+  --h4-font: 3.125rem;
+  --h6-font: 1.125rem;
+  --p-font: 1rem;
+}
+body {
+  background-color: var(--pri-color);
+}
+header {
+  position: fixed;
+  width: 100%;
+  right: 0;
+  top: 0;
+  z-index: 10001;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 14%;
+}
+.logo {
+  color: var(--text-color);
+  font-size: var(--h2-font);
+  cursor: pointer;
+}
+.logo span {
+  color: var(--sec-color);
+}
+.nav-section {
+  display: flex;
+  align-items: center;
+  color: var(--p-color);
+  list-style: none;
+}
+.nav-section a {
+  color: var(--text-color);
+  font-size: var(--h6-font);
+  font-weight: 500;
+  padding: 10px 20px;
+  transition: all 0.42s;
+}
+.nav-section a:hover {
+  color: var(--sec-color);
+}
+
+section {
+  padding: 110px 14% 100px;
+}
+
+/* Sticky Header Section */
+header.sticky {
+  background-color: var(--pri-color);
+  padding: 14px 14%;
+  box-shadow: 6px 4px 15px rgb(0 0 0 /8%);
+  transition: all 0.42s;
+}
+
+/* Reviews-section CSS */
+.reviews-section{
+    background: var(--main-bg);
+  }
+  .review-top{
+    text-align: center;
+  }
+  .review-top h4{
+    color: var(--sec-color);
+    font-size: var(--h6-font);
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-bottom: 15px;
+  }
+  .review-top h2{
+    color: var(--text-color);
+    font-size: var(--h2-font);
+    font-weight: 700;
+    text-transform: capitalize;
+    font-family: "Work Sans", serif;
+    line-height: 1.5;
+  }
+  .review-top h2 span{
+    color: var(--sec-color);
+  }
+  .review-top p {
+    color: var(--p-color);
+    font-size: var(--h6-font);
+    font-weight: 500;
+    line-height: 2;
+    margin-bottom: 25px;
+  }
+  .client-reviews{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    gap: 2rem;
+   
+  }
+  .client-box{
+    background-color: var(--pri-color);
+    padding: 15px 10px;
+    gap: 1.5rem;
+    border-radius: 10px;
+    transition: all .42s;
+  }
+  .client-box:hover{
+    transform: scale(1.1);
+  }
+  .client-text h4{
+    color: var(--sec-color);
+    font-size: var(--h6-font);
+    font-weight: 600;
+    text-align: center;
+    text-transform: capitalize;
+    margin: 15px 0px;
+  }
+  .client-text p{
+    color: var(--p-color);
+    font-size: var(--p-font);
+    font-weight: 500;
+    line-height: 26px;
+  }
+  .review-btn{
+    margin-top: 50px;
+  }
+  .review-btn a {
+    color: var(--main-bg);
+    background-color: var(--sec-color);
+    font-size: var(--h6-font);
+    font-weight: 600;
+    padding: 10px 15px;
+    border: 2px solid var(--sec-color);
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: all 0.42s;
+  }
+  .review-btn a:hover {
+    color: var(--text-color);
+    background-color: transparent;
+  }
+    
+
+/* Footer section CSS */
+.footer {
+  background: radial-gradient(
+    circle,
+    rgba(8, 18, 16, 1) 34%,
+    rgba(0, 0, 0, 1) 69%
+  );
+}
+.main-footer {
+  text-align: center;
+  padding: 45px 0px;
+}
+.footer-text h4 {
+  color: var(--sec-color);
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 15px;
+}
+.footer-text h2 {
+  color: var(--text-color);
+  font-size: var(--h3-font);
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+  line-height: 1.2;
+  font-family: "Work Sans", serif;
+}
+.footer-text p {
+  color: var(--p-color);
+  font-size: var(--h6-font);
+  font-weight: 500;
+  line-height: 2;
+  margin-bottom: 25px;
+}
+.form-menu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1rem;
+}
+.client-details input {
+  width: 100%;
+  height: auto;
+  padding: 20px 80px;
+  margin: 15px 0px;
+  outline: none;
+  border: 3px solid var(--sec-color);
+  border-radius: 5px;
+  background: transparent;
+  caret-color: var(--main-bg);
+}
+::placeholder {
+  color: var(--p-color);
+  font-size: var(--p-font);
+  text-transform: capitalize;
+}
+input:focus,
+input:valid {
+  color: var(--text-color);
+}
+.contact-btn {
+  text-align: center;
+  margin: 50px 0px;
+}
+.contact-btn a {
+  color: var(--main-bg);
+  background-color: var(--sec-color);
+  font-size: var(--h6-font);
+  font-weight: 600;
+  padding: 10px 15px;
+  border: 2px solid var(--sec-color);
+  border-radius: 5px;
+  text-transform: uppercase;
+  transition: all 0.42s;
+}
+.contact-btn p {
+  color: var(--p-color);
+  font-size: var(--h6-font);
+  font-weight: 600;
+  margin-top: 30px;
+  letter-spacing: 2px;
+}
+.social-icon {
+  margin: 10px 0px;
+}
+.social-icon i {
+  background-color: var(--sec-color);
+  color: var(--main-bg);
+  font-size: var(--h6-font);
+  font-weight: 600;
+  margin-right: 20px;
+  border: 1px solid var(--sec-color);
+  border-radius: 50%;
+  padding: 5px;
+  transition: all 0.42s;
+}
+.social-icon i:hover {
+  transform: translateY(-5px);
+}
+
+/* Copyright Section CSS */
+
+.copyright {
+  background: var(--main-bg);
+  text-align: center;
+}
+.copyright p {
+  color: var(--text-color);
+  font-size: var(--p-font);
+  font-weight: 400;
+  text-transform: capitalize;
+  padding: 25px 0;
+}
