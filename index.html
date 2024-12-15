@@ -30,7 +30,25 @@
         <li><a href="./pages/review.html">Reviews</a></li>
         <li><a href="./pages/contact.html">Contact me</a></li>
       </ul>
+      <div class="mobile-menu">
+        <i class="bx bx-menu" id="cat_mobile"></i>
+    </div>
     </header>
+    <div class="mobile_header_div" id="mobile_cat_div">
+      <div class="mobile_close_wrap">
+        <i class="bx bx-x" id="cancel_button"></i>
+      </div>
+      <ul class="mobile_nav_section">
+        <li><a href="#Home">Home</a><i class="bx bx-chevron-right"></i></li>
+        <li><a href="./pages/about.html">About </a> <i class="bx bx-chevron-right"></i></li>
+        <li><a href="./pages/hireme.html">Why Hire Me</a><i class="bx bx-chevron-right"></i></li>
+        <li><a href="./pages/portfolio.html">Portfolio</a><i class="bx bx-chevron-right"></i></li>
+        <li><a href="./pages/services.html">Services</a><i class="bx bx-chevron-right"></i></li>
+        <li><a href="./pages/review.html">Reviews</a><i class="bx bx-chevron-right"></i></li>
+        <li><a href="./pages/contact.html">Contact me</a><i class="bx bx-chevron-right"></i></li>
+      </ul>
+    
+  </div>
     <!-- Hero section html -->
     <section class="hero">
       <div class="hero-text">
@@ -182,6 +200,12 @@
     const header = document.querySelector("header");
     window.addEventListener("scroll", function(){
     header.classList.toggle("sticky", this.window.scrollY > 0);});
+    document.getElementById('cat_mobile').addEventListener('click',()=>{
+            document.getElementById('mobile_cat_div').setAttribute('style','visibility:visible;')
+        })
+        document.getElementById('cancel_button').addEventListener('click',()=>{
+            document.getElementById('mobile_cat_div').setAttribute('style','visibility:hidden')
+        })
     </script>
   </body>
 </html>
