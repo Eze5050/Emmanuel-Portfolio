@@ -1,78 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  font-family: "Roboto", sans-serif;
-  box-sizing: border-box;
-  list-style: none;
-  text-decoration: none;
-  scroll-behavior: smooth;
-}
-:root {
-  --text-color: #ffffff;
-  --main-bg: #000000;
-  --sec-color: #5cd2b9;
-  --pri-color: #151515;
-  --p-color: #aaaaaa;
-
-  --h1-font: 4rem;
-  --h2-font: 2.25rem;
-  --h3-font: 1.875rem;
-  --h4-font: 3.125rem;
-  --h6-font: 1.125rem;
-  --p-font: 1rem;
-}
-body {
-  background-color: var(--pri-color);
-}
-header {
-  position: fixed;
-  width: 100%;
-  right: 0;
-  top: 0;
-  z-index: 10001;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 30px 14%;
-}
-.logo {
-  color: var(--text-color);
-  font-size: var(--h2-font);
-  cursor: pointer;
-}
-.logo span {
-  color: var(--sec-color);
-}
-.nav-section {
-  display: flex;
-  align-items: center;
-  color: var(--p-color);
-  list-style: none;
-}
-.nav-section a {
-  color: var(--text-color);
-  font-size: var(--h6-font);
-  font-weight: 500;
-  padding: 10px 20px;
-  transition: all 0.42s;
-}
-.nav-section a:hover {
-  color: var(--sec-color);
-}
-section {
-  padding: 110px 14% 100px;
-}
-
-/* Sticky Header Section */
-header.sticky {
-  background-color: var(--pri-color);
-  padding: 14px 14%;
-  box-shadow: 6px 4px 15px rgb(0 0 0 /8%);
-  transition: all 0.42s;
-}
-
-/*  */
-
 .employ {
   background-color: var(--main-bg);
 }
@@ -312,4 +237,42 @@ input:valid {
   font-weight: 400;
   text-transform: capitalize;
   padding: 25px 0;
+}
+
+@media only screen and (max-width : 450px) {
+  .employ-wrap { 
+    display: flex ;
+    flex-direction: column-reverse;
+    margin-top: 100px;
+  }
+
+  .employ-img img { 
+    width: 200px ;
+    height: 200px;
+  }
+  .form-menu { 
+    display: flex ;
+    flex-direction: column;
+  }
+  .employ-text h2 { 
+    font-size: 18px;
+    font-weight: 400;
+  }
+  .appoint-top h2 { 
+    font-size: 18px;
+    font-weight: 400;
+  }
+  .appoint-center h4 { 
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .appoint-end {
+    display: flex ;
+    padding: 0 20px;
+    flex-direction: column;
+  }
+  .appoint-btn {
+    margin: 0 auto;
+
+  }
 }
