@@ -787,6 +787,13 @@ input:valid {
 .social-icon i:hover {
 	transform: translateY(-5px);
 }
+.testimony_img{
+	width: 100%;
+	
+	object-fit: cover;
+	object-position: center;
+	border-radius: 10px;
+}
 
 /* Copyright Section CSS */
 

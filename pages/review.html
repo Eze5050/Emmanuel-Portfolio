@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>review page:what others are saying</title>
     <link rel="stylesheet" href="../styles/review.css">
+    <link rel="stylesheet" href="../styles/style.css">
 
     <link
       rel="stylesheet"
@@ -20,18 +21,36 @@
 
 </head>
 <body>
-    <header>
-        <h2 class="logo"><span>Emma</span>nuel</h2>
-        <ul class="nav-section">
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="./about.html">About </a></li>
-            <li><a href="./hireme.html">Why Hire Me</a></li>
-            <li><a href="./portfolio.html">Portfolio</a></li>
-            <li><a href="./services.html">Services</a></li>
-            <li><a href="./contact.html">Contact me</a></li>
-        </ul>
-    </header>
-
+  <header>
+    <h2 class="logo"><span>Emma</span>nuel</h2>
+    <ul class="nav-section">
+      <li><a href="/index.html">Home</a></li>
+      <li><a href="#">About </a></li>
+      <li><a href="/pages/hireme.html">Why Hire Me</a></li>
+      <li><a href="/pages/portfolio.html">Portfolio</a></li>
+      <li><a href="/pages/services.html">Services</a></li>
+      <li><a href="/pages/review.html">Reviews</a></li>
+      <li><a href="/pages/contact.html">Contact me</a></li>
+    </ul>
+    <div class="mobile-menu">
+      <i class="bx bx-menu" id="cat_mobile"></i>
+  </div>
+  </header>
+  <div class="mobile_header_div" id="mobile_cat_div">
+    <div class="mobile_close_wrap">
+      <i class="bx bx-x" id="cancel_button"></i>
+    </div>
+    <ul class="mobile_nav_section">
+      <li><a href="/index.html">Home</a><i class="bx bx-chevron-right"></i></li>
+      <li><a href="/pages/about.html">About </a> <i class="bx bx-chevron-right"></i></li>
+      <li><a href="/pages/hireme.html">Why Hire Me</a><i class="bx bx-chevron-right"></i></li>
+      <li><a href="/pages/portfolio.html">Portfolio</a><i class="bx bx-chevron-right"></i></li>
+      <li><a href="/pages/services.html">Services</a><i class="bx bx-chevron-right"></i></li>
+      <li><a href="#">Reviews</a><i class="bx bx-chevron-right"></i></li>
+      <li><a href="/pages/contact.html">Contact me</a><i class="bx bx-chevron-right"></i></li>
+    </ul>
+  
+</div>
     <!-- Review Section HTML -->
     <section class="reviews-section">
         <div class="review-page">
@@ -174,6 +193,12 @@
         window.addEventListener("scroll", function () {
           header.classList.toggle("sticky", this.window.scrollY > 0);
         });
+        document.getElementById('cat_mobile').addEventListener('click',()=>{
+            document.getElementById('mobile_cat_div').setAttribute('style','visibility:visible;')
+        })
+        document.getElementById('cancel_button').addEventListener('click',()=>{
+            document.getElementById('mobile_cat_div').setAttribute('style','visibility:hidden')
+        })
     </script>
 </body>
 </html>
